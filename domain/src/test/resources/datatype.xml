@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<datatype>
+    <name>dyn</name>
+    <fields>
+        <field name="s" type="number" min="0.0" max="0.0"/>
+        <field name="v" type="number" min="0.0" max="0.0"/>
+    </fields>
+    <pow>false</pow>
+    <def>true</def>
+    <continuous>true</continuous>
+</datatype>
