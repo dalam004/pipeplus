@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<place datatype="Vector" id="P0" container="main">
+    <graphics>
+        <position x="70.0" y="70.0"/>
+    </graphics>
+    <name>
+        <value>AircraftA</value>
+        <graphics>
+            <offset x="-27.0" y="44.0"/>
+        </graphics>
+    </name>
+    <capacity>1</capacity>
+    <initialMarking>
+        <token>
+            <data type="number">
+                <value>0</value>
+            </data>
+            <data type="number">
+                <value>0</value>
+            </data>
+            <data type="number">
+                <value>0.3535</value>
+            </data>
+            <data type="number">
+                <value>0.3535</value>
+            </data>
+        </token>
+    </initialMarking>
+    <continuous>true</continuous>
+    <formula>ax1[1]=ax+0.5</formula>
+</place>
