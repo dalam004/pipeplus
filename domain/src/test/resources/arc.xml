@@ -1,0 +1,13 @@
+<arc id="A33" datatype="m_RouteY" container="RouteY">
+    <source>T7</source>
+    <target>P10</target>
+    <label>s</label>
+    <type>normal</type>
+    <graphics>
+        <arcpath>
+            <arcpoint id="000" x="621" y="523" curvePoint="false"/>
+            <arcpoint id="001" x="529" y="514" curvePoint="true"/>
+            <arcpoint id="002" x="452" y="437" curvePoint="false"/>
+        </arcpath>
+    </graphics>
+</arc>
