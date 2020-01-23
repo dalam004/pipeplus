@@ -1,7 +1,6 @@
 package pipeplus.domain.net;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import pipeplus.domain.net.type.Type;
@@ -14,8 +13,8 @@ public class Value {
   private int mHashCode = -1;
 
   @JsonCreator
-  public Value(@JsonProperty("value") final String pValue,
-               @JsonProperty("type") final String pType) {
+  public Value(@JacksonXmlProperty(localName = "value") final String pValue,
+               @JacksonXmlProperty(localName = "type", isAttribute = true) final String pType) {
     mValue = pValue;
     mType = pType;
     if (Type.NUMBER.typeName().equals(mType)) {
