@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pnml>
+    <net id="Net-One" type="P/T net">
+        <datatypes>
+            <datatype>
+                <name>philo</name>
+                <fields>
+                    <field name="s" type="number" min="00.0" max="0.0"/>
+                    <field name="v" type="number" min="0.0" max="0.0"/>
+                </fields>
+                <pow>false</pow>
+                <def>true</def>
+                <continuous>true</continuous>
+            </datatype>
+        </datatypes>
+        <place datatype="P0_t" id="P0" container="main">
+            <graphics>
+                <position x="145.0" y="40.0"/>
+            </graphics>
+            <name>
+                <value>Thinking</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>5</value>
+            </capacity>
+            <abtoken>
+                <isDef>
+                    <value>T</value>
+                </isDef>
+                <listToken>
+                    <token>
+                        <data>
+                            <value>0</value>
+                        </data>
+                    </token>
+                    <token>
+                        <data>
+                            <value>1</value>
+                        </data>
+                    </token>
+                    <token>
+                        <data>
+                            <value>2</value>
+                        </data>
+                    </token>
+                    <token>
+                        <data>
+                            <value>3</value>
+                        </data>
+                    </token>
+                    <token>
+                        <data>
+                            <value>4</value>
+                        </data>
+                    </token>
+                </listToken>
+            </abtoken>
+            <continuous>
+                <value>false</value>
+            </continuous>
+        </place>
+        <place datatype="P1_t" id="P1" container="main">
+            <graphics>
+                <position x="505.0" y="55.0"/>
+            </graphics>
+            <name>
+                <value>UsedForks</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>5</value>
+            </capacity>
+            <abtoken>
+                <isDef>
+                    <value>T</value>
+                </isDef>
+                <listToken>
+                    <token>
+                        <data>
+                            <value>0</value>
+                        </data>
+                    </token>
+                    <token>
+                        <data>
+                            <value>1</value>
+                        </data>
+                    </token>
+                    <token>
+                        <data>
+                            <value>2</value>
+                        </data>
+                    </token>
+                    <token>
+                        <data>
+                            <value>3</value>
+                        </data>
+                    </token>
+                    <token>
+                        <data>
+                            <value>4</value>
+                        </data>
+                    </token>
+                </listToken>
+            </abtoken>
+            <continuous>
+                <value>false</value>
+            </continuous>
+        </place>
+        <place datatype="P2_t" id="P2" container="main">
+            <graphics>
+                <position x="360.0" y="225.0"/>
+            </graphics>
+            <name>
+                <value>Eating</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <initialMarking>
+                <value>0</value>
+                <graphics>
+                    <offset x="0.0" y="0.0"/>
+                </graphics>
+            </initialMarking>
+            <capacity>
+                <value>0</value>
+            </capacity>
+            <abtoken>
+                <isDef>
+                    <value>T</value>
+                </isDef>
+                <listToken/>
+            </abtoken>
+            <continuous>
+                <value>false</value>
+            </continuous>
+        </place>
+        <transition id="T0" container="main">
+            <graphics>
+                <position x="360.0" y="120.0"/>
+            </graphics>
+            <name>
+                <value>Acquire</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+            <formula>
+                <value>y=(x+1)%5</value>
+            </formula>
+            <continuous>
+                <value>false</value>
+            </continuous>
+        </transition>
+        <transition id="T1" container="main">
+            <graphics>
+                <position x="360.0" y="345.0"/>
+            </graphics>
+            <name>
+                <value>PutDown</value>
+                <graphics>
+                    <offset x="-5.0" y="35.0"/>
+                </graphics>
+            </name>
+            <orientation>
+                <value>0</value>
+            </orientation>
+            <rate>
+                <value>1.0</value>
+            </rate>
+            <timed>
+                <value>false</value>
+            </timed>
+            <infiniteServer>
+                <value>false</value>
+            </infiniteServer>
+            <priority>
+                <value>1</value>
+            </priority>
+            <formula>
+                <value>y=(x+1)%5</value>
+            </formula>
+            <continuous>
+                <value>false</value>
+            </continuous>
+        </transition>
+        <arc id="P0 to T0" source="P0" target="T0" variable="{x}" datatype="P0_t" container="main">
+            <graphics/>
+            <inscription>
+                <value>1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <DataType>
+                <name>
+                    <value/>
+                </name>
+                <Ntype>
+                    <value/>
+                </Ntype>
+                <types>
+                    <value/>
+                </types>
+                <ifPow>
+                    <value/>
+                </ifPow>
+                <NumofElement>
+                    <value/>
+                </NumofElement>
+                <isDef>
+                    <value/>
+                </isDef>
+            </DataType>
+            <arcpath id="000" x="171" y="57" curvePoint="false"/>
+            <arcpath id="001" x="366" y="132" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="P1 to T0" source="P1" target="T0" variable="{x,y}" datatype="P1_t" container="main">
+            <graphics/>
+            <inscription>
+                <value>1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <DataType>
+                <name>
+                    <value/>
+                </name>
+                <Ntype>
+                    <value/>
+                </Ntype>
+                <types>
+                    <value/>
+                </types>
+                <ifPow>
+                    <value/>
+                </ifPow>
+                <NumofElement>
+                    <value/>
+                </NumofElement>
+                <isDef>
+                    <value/>
+                </isDef>
+            </DataType>
+            <arcpath id="000" x="503" y="73" curvePoint="false"/>
+            <arcpath id="001" x="376" y="132" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="P2 to T1" source="P2" target="T1" variable="{x}" datatype="P2_t" container="main">
+            <graphics/>
+            <inscription>
+                <value>1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <DataType>
+                <name>
+                    <value/>
+                </name>
+                <Ntype>
+                    <value/>
+                </Ntype>
+                <types>
+                    <value/>
+                </types>
+                <ifPow>
+                    <value/>
+                </ifPow>
+                <NumofElement>
+                    <value/>
+                </NumofElement>
+                <isDef>
+                    <value/>
+                </isDef>
+            </DataType>
+            <arcpath id="000" x="372" y="251" curvePoint="false"/>
+            <arcpath id="001" x="372" y="342" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="T0 to P2" source="T0" target="P2" variable="{x}" datatype="P2_t" container="main">
+            <graphics/>
+            <inscription>
+                <value>1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <DataType>
+                <name>
+                    <value/>
+                </name>
+                <Ntype>
+                    <value/>
+                </Ntype>
+                <types>
+                    <value/>
+                </types>
+                <ifPow>
+                    <value/>
+                </ifPow>
+                <NumofElement>
+                    <value/>
+                </NumofElement>
+                <isDef>
+                    <value/>
+                </isDef>
+            </DataType>
+            <arcpath id="000" x="372" y="147" curvePoint="false"/>
+            <arcpath id="001" x="372" y="222" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="T1 to P0" source="T1" target="P0" variable="{x}" datatype="P0_t" container="main">
+            <graphics/>
+            <inscription>
+                <value>1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <DataType>
+                <name>
+                    <value/>
+                </name>
+                <Ntype>
+                    <value/>
+                </Ntype>
+                <types>
+                    <value/>
+                </types>
+                <ifPow>
+                    <value/>
+                </ifPow>
+                <NumofElement>
+                    <value/>
+                </NumofElement>
+                <isDef>
+                    <value/>
+                </isDef>
+            </DataType>
+            <arcpath id="000" x="366" y="357" curvePoint="false"/>
+            <arcpath id="001" x="165" y="64" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+        <arc id="T1 to P1" source="T1" target="P1" variable="{x,y}" datatype="P1_t" container="main">
+            <graphics/>
+            <inscription>
+                <value>1</value>
+                <graphics/>
+            </inscription>
+            <tagged>
+                <value>false</value>
+            </tagged>
+            <DataType>
+                <name>
+                    <value/>
+                </name>
+                <Ntype>
+                    <value/>
+                </Ntype>
+                <types>
+                    <value/>
+                </types>
+                <ifPow>
+                    <value/>
+                </ifPow>
+                <NumofElement>
+                    <value/>
+                </NumofElement>
+                <isDef>
+                    <value/>
+                </isDef>
+            </DataType>
+            <arcpath id="000" x="372" y="342" curvePoint="false"/>
+            <arcpath id="001" x="510" y="80" curvePoint="false"/>
+            <type value="normal"/>
+        </arc>
+    </net>
+</pnml>
