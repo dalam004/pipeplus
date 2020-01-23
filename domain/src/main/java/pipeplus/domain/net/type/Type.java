@@ -1,6 +1,4 @@
-package pipeplus.domain.type;
-
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+package pipeplus.domain.net.type;
 
 public enum Type {
 

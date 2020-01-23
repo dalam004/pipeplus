@@ -1,4 +1,4 @@
-package pipeplus.domain.type;
+package pipeplus.domain.net.type;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;

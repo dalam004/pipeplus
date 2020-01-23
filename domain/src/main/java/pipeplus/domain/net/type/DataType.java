@@ -1,9 +1,6 @@
-package pipeplus.domain.type;
+package pipeplus.domain.net.type;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
@@ -95,13 +92,8 @@ public class DataType {
         mName = pName;
     }
 
-    @JsonGetter(value = "fields")
-    public FieldsWrapper getField() {
-//        FIX-ME: This trick is applied to
-        return new FieldsWrapper(getFields());
-    }
-
-    @JsonIgnore
+    @JacksonXmlElementWrapper(localName = "fields")
+    @JacksonXmlProperty(localName = "field")
     public List<Field> getFields() {
         return Arrays.asList(mFields);
     }
@@ -118,7 +110,6 @@ public class DataType {
      * change the data held by those places.
      * @param pFields
      */
-    @JsonSetter(value = "fields")
     public void setFields(List<Field> pFields) {
         if (isDefined()) {
             throw new IllegalStateException("The datatype named \""+mName+"\" is already defined. It accepts no more modification.");
