@@ -5,11 +5,11 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import pipeplus.domain.net.Location;
-import pipeplus.domain.net.NameLabel;
-import pipeplus.domain.net.Place;
+import pipeplus.domain.net.*;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class PlaceTest {
 
@@ -20,6 +20,8 @@ public class PlaceTest {
     place.setNameLabel(new NameLabel("P0", new Location(5.0, 10.0)));
     place.setDataTypeName("discrete");
 
+    place.getInitialMarking().add(new Token());
+    place.getInitialMarking().get(0).setValues(Arrays.asList(new Value("string", "abc"), new Value("number", "10.0")));
     XmlMapper mapper = new XmlMapper();
     String serialized = mapper.writeValueAsString(place);
     System.out.println(serialized);
@@ -36,6 +38,9 @@ public class PlaceTest {
     Assert.assertTrue(place.getCapacity()==1);
     Assert.assertTrue("ax1[1]=ax+0.5".equals(place.getFormula()));
     System.out.println(place.getInitialMarking().get(0).getValues());
+    for (Token token : place.getInitialMarking()) {
+      System.out.println("TOken:: "+token.getValues().stream().map(v -> String.format("<%s, %s>", v.getType(), v.getValue())).collect(Collectors.joining(",")));
+    }
 
     System.out.println(mapper.writeValueAsString(place));
   }
