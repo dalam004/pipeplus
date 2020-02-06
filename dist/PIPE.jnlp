@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<jnlp spec="1.0+" codebase="https://master.dl.sourceforge.net/project/pipe-verifier" href="PIPE.jnlp">
+<jnlp spec="1.0+" codebase="hhttps://raw.githubusercontent.com/dalam004/pipeplus/master/dist" href="PIPE.jnlp">
   <information>
     <title>Dynamic Tree Demo</title>
     <vendor>Dynamic Team</vendor>
