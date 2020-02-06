@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<jnlp spec="1.0+" codebase="https://raw.githubusercontent.com/dalam004/pipeplus/master/dist" href="PIPE.jnlp">
+<jnlp spec="1.0+" codebase="https://github.com/dalam004/pipeplus/raw/master/dist/PIPE.jnlp" href="PIPE.jnlp">
   <information>
     <title>PIPE+</title>
     <vendor>CADSE, FIU</vendor>
