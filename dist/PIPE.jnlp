@@ -11,28 +11,28 @@
     </security>
     <!-- Application Resources -->
     <j2se version="1.8+"/>
-    <jar href="depenency/pipe-verifier-1.0-SNAPSHOT.jar" main="true" />
-    <jar href="depenency/VectorGraphics2D-0.11.jar" />
-    <jar href="depenency/commons-io-2.4.jar" />
-    <jar href="depenency/jackson-annotations-2.5.4.jar" />
-    <jar href="depenency/jep-3.7.1.jar" />
-    <jar href="depenency/xchart-demo-3.3.1.jar" />
-    <jar href="depenency/ant-1.9.7.jar" />
-    <jar href="depenency/commons-lang-2.6.jar" />
-    <jar href="depenency/jackson-core-2.5.4.jar" />
-    <jar href="depenency/jflex-1.6.1.jar" />
-    <jar href="depenency/xercesImpl-2.11.0.jar" />
-    <jar href="depenency/ant-launcher-1.9.7.jar" />
-    <jar href="depenency/commons-math3-3.6.1.jar" />
-    <jar href="depenency/jackson-databind-2.5.4.jar" />
-    <jar href="depenency/jpowergraph-common-0.2.jar" />
-    <jar href="depenency/velocity-1.7.jar" />
-    <jar href="depenency/xml-apis-1.4.01.jar" />
-    <jar href="depenency/commons-collections-3.2.1.jar" />
-    <jar href="depenency/java-cup-11a.jar" />
-    <jar href="depenency/guava-19.0.jar" />
-    <jar href="depenency/jpowergraph-swing-0.2.jar" />
-    <jar href="depenency/xchart-3.3.1.jar" />
+    <jar href="dependency/pipe-verifier-1.0-SNAPSHOT.jar" main="true" />
+    <jar href="dependency/VectorGraphics2D-0.11.jar" />
+    <jar href="dependency/commons-io-2.4.jar" />
+    <jar href="dependency/jackson-annotations-2.5.4.jar" />
+    <jar href="dependency/jep-3.7.1.jar" />
+    <jar href="dependency/xchart-demo-3.3.1.jar" />
+    <jar href="dependency/ant-1.9.7.jar" />
+    <jar href="dependency/commons-lang-2.6.jar" />
+    <jar href="dependency/jackson-core-2.5.4.jar" />
+    <jar href="dependency/jflex-1.6.1.jar" />
+    <jar href="dependency/xercesImpl-2.11.0.jar" />
+    <jar href="dependency/ant-launcher-1.9.7.jar" />
+    <jar href="dependency/commons-math3-3.6.1.jar" />
+    <jar href="dependency/jackson-databind-2.5.4.jar" />
+    <jar href="dependency/jpowergraph-common-0.2.jar" />
+    <jar href="dependency/velocity-1.7.jar" />
+    <jar href="dependency/xml-apis-1.4.01.jar" />
+    <jar href="dependency/commons-collections-3.2.1.jar" />
+    <jar href="dependency/java-cup-11a.jar" />
+    <jar href="dependency/guava-19.0.jar" />
+    <jar href="dependency/jpowergraph-swing-0.2.jar" />
+    <jar href="dependency/xchart-3.3.1.jar" />
   </resources>
   <application-desc
       name="PIPE+ 2.0"
